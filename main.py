@@ -115,8 +115,8 @@ this will help you escape ")
               hours_left -= 2
               if "sharp object" in items:
                 print("You killed the guard with your \
-                sharp obeject! You were caught on the security cams \
-                You failed to escape. GAME OVER")
+sharp obeject! You were caught on the security cams \
+You failed to escape. GAME OVER")
                 exit()
                 break
               if  "soap" in items:
@@ -513,8 +513,8 @@ you were caught. GAME OVER ")
             hours_left -= 2
             if "sharp object" in items:
                 print("You killed the guard with your \
-                sharp obeject! You were caught on the security cams \
-                You failed to escape. GAME OVER")
+sharp obeject! You were caught on the security cams \
+You failed to escape. GAME OVER")
                 exit()
                 break
             if  "soap" in items:
