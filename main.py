@@ -5,6 +5,7 @@
 # Name: Brahm Gainda
 # Description: Capstone Coding Project
 
+# Imports
 import time as t
 import random as r
 from tabulate import tabulate
@@ -90,17 +91,19 @@ def escape(hours_left):
 Would you like to search for supplies? (say yes)
 > \
 """.format(hours_left)
-        # Prompt That Asks The User Their Desired Path
+# Prompt That Asks The User Their Desired Path
         x = input(message)
-        # map
+# map
         if x.lower() == "map":
                 print_map()
                 break
-        # Supplies path, One Path The User Could Use
+# Supplies path, One Path The User Could Use
+# If the user wishs to look for supplies
         if x.lower() == "yes":
           print_map()
           print("Where will you go to find supplies")
           choice = input(supplies)
+# If the user wants to go to the supplies room
           if choice.lower() == "supplies room":
                     hours_left -= 4
                     items.append("sharp object")
@@ -108,9 +111,10 @@ Would you like to search for supplies? (say yes)
 this will help you escape ")
                     print("you have " + str(hours_left) + " hours left")
                     input(courtyard_sneak)
-          # you are stopped by a guard
+# the user encounters a guard
           if courtyard_sneak.lower() == "yes":
             choice1 = input(security_guard)
+# The user attacks the guard (GAME OVER)
             if choice1.lower() == "attack":
               hours_left -= 2
               if "sharp object" in items:
@@ -122,22 +126,26 @@ You failed to escape. GAME OVER")
               if  "soap" in items:
                     print(f"\nYou could not do anything with just your soap, \
 you were caught. GAME OVER ")
+# The user runs away from the guard
             choice1 = input(security_guard)
             if choice1.lower() == "run away":
               if "sharp object" in items:
                 print("You succesfuly ran away to your cell")
                 input(wake_up)
-  # wake up
+  # wake up the next morning
+  # User waits until delivery truck arrives
             if wake_up.lower() == "act":
                       print("\nYou decided to act non suspicious until the truck comes")
                       print("Your almost out, dont let the nerves get to you!")
                       input(escape_1)
+  # the user is able to escape using blueprint
                       if escape_1.lower() == "yes":
                           if "blueprints" in knowledge:
                             print("\nYou used your blueprints to navigate your way to the delivery truck \
                             You snuck into the truck and escaped prison! \
                   GOOD JOB YOU WON THE GAME!")
                             break
+  # User does not have blueprints, cannot escape
                           if  "blueprints" not in knowledge:
                             print(f"\nYou did not have the blueprints so \
                             you could not navigate your way to the truck. \
@@ -145,6 +153,7 @@ you were caught. GAME OVER ")
                             GAME OVER")
                             exit()
                             break
+  # User does not want to escape
                       if escape_1.lower() == "no":
                         print("you did not go to the truck in time \
                 It left you behind and now your stuck in prison \
@@ -159,15 +168,18 @@ you were caught. GAME OVER ")
                     input(wake_up)
         # wake up 
             if wake_up.lower() == "act":
+        # User waits until delivery truck arrives
                       print("\nYou decided to act non suspicious until the truck comes")
                       print("Your almost out, dont let the nerves get to you!")
                       input(escape_1)
                       if escape_1.lower() == "yes":
+        # the user is able to escape using blueprint
                           if "blueprints" in knowledge:
                             print("\nYou used your blueprints to navigate your way to the delivery truck \
                             You snuck into the truck and escaped prison! \
                   GOOD JOB YOU WON THE GAME!")
                             break
+        # user does not have blueprint, cannot escape
                           if  "blueprints" not in knowledge:
                             print(f"\nYou did not have the blueprints so \
                             you could not navigate your way to the truck. \
@@ -175,6 +187,7 @@ you were caught. GAME OVER ")
                             GAME OVER")
                             exit()
                             break
+        # user does not want to escape
                       if escape_1.lower() == "no":
                         print("you did not go to the truck in time \
                 It left you behind and now your stuck in prison \
@@ -201,12 +214,15 @@ you were caught. GAME OVER ")
                       print("\nYou decided to act non suspicious until the truck comes")
                       print("Your almost out, dont let the nerves get to you!")
                       input(escape_1)
+  # user wants to escape
                       if escape_1.lower() == "yes":
+  # user is able to escape using blueprint
                           if "blueprints" in knowledge:
                             print("\nYou used your blueprints to navigate your way to the delivery truck \
                             You snuck into the truck and escaped prison! \
                   GOOD JOB YOU WON THE GAME!")
                             break
+  # user is not able to escape, does not have blueprint
                           if  "blueprints" not in knowledge:
                             print(f"\nYou did not have the blueprints so \
                             you could not navigate your way to the truck. \
@@ -214,6 +230,7 @@ you were caught. GAME OVER ")
                             GAME OVER")
                             exit()
                             break
+ # user does not want to escape
                       if escape_1.lower() == "no":
                         print("you did not go to the truck in time \
                 It left you behind and now your stuck in prison \
@@ -227,16 +244,19 @@ you were caught. GAME OVER ")
                     print(f"\nYou succesfuly ran away to your cell")
                     input(wake_up)
         # wake up 
+        # user wants to wait till truck comes
             if wake_up.lower() == "act":
                       print("\nYou decided to act non suspicious until the truck comes")
                       print("Your almost out, dont let the nerves get to you!")
                       input(escape_1)
+        # user is able to escape using blueprint
                       if escape_1.lower() == "yes":
                           if "blueprints" in knowledge:
                             print("\nYou used your blueprints to navigate your way to the delivery truck \
                             You snuck into the truck and escaped prison! \
                   GOOD JOB YOU WON THE GAME!")
                             break
+        # user does not have blueprint, cannt escape
                           if  "blueprints" not in knowledge:
                             print(f"\nYou did not have the blueprints so \
                             you could not navigate your way to the truck. \
@@ -244,6 +264,7 @@ you were caught. GAME OVER ")
                             GAME OVER")
                             exit()
                             break
+        # user does not want to escape
                       if escape_1.lower() == "no":
                         print("you did not go to the truck in time \
                 It left you behind and now your stuck in prison \
@@ -253,6 +274,7 @@ you were caught. GAME OVER ")
 
 
             break
+        # user wants to attack guard
             if choice1.lower() == "attack":
               hours_left -= 2
               if "sharp object" in items:
