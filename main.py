@@ -15,7 +15,7 @@ knowledge = []
 items = []
 map_updates = []
 
-# Prompts
+# Prompts (User Input)
 supplies = "Supplies Room or Showers "
 
 courtyard_sneak = "\nNow that you've done that \
@@ -36,7 +36,7 @@ the crucial blueprints or act like a normal \
 prisoner (sneak/act) ?"
 
 escape_1 = "4 hrs have passed, the delivery truck \
-has just arrived! Will you run to into it (yes/no)"
+has just arrived! Will you run to it (yes/no)"
 
 # Prints Map Of The Prison
 def print_map():
