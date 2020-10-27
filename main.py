@@ -599,7 +599,7 @@ you were caught. GAME OVER ")
                     GAME OVER")
                     exit()
                     break
-# if user doesnt want to escape
+# if user doesnt want to escape p
             if q.lower() == "no":
                 print("you did not go to the truck in time \
             It left you behind and now your stuck in prison \
