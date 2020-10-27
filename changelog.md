@@ -14,4 +14,4 @@ Includes all important changes to the RPG adventure game.
 **v0.1 - Prerelease**
 - Added ReadMe Section describing the project.
 - Added Change Log section for important modifications.
-- Added Checklist 
+- Added Checklist to keep track of progress
