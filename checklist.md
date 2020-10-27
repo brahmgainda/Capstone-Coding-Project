@@ -13,4 +13,4 @@
 - add a post escape section. (planning where one will go to after the escape) 
 more to the story than just getting out the prison. How will one still off the grid and not get caught again?
 - involve more authorities into the plot (Warden calls you in for meetings, you get to interact with the guards and the workers)
-- the user could strenghten their in game abilties (have certain traits that will help them escape)
+- the user could strenghten their in game abilities and traits (have certain traits that will help them escape)
